@@ -58,7 +58,7 @@ Replace `cv/example-cv.pdf` with your own CV and set `cv_pdf`. Section names mus
 ## Optional daily Scholar updates
 
 1. Set `scholar.enabled: true` and `scholar.profile_id` in `_config.yml`. The ID is the `user=` value in your public Google Scholar profile URL. Set `google_scholar` to your own profile link.
-2. Replace the sample papers and add their exact `scholar_id` values where available; the updater can also match normalized titles.
+2. Replace the sample papers and add each paper's exact `scholar_id` (the full `citation_for_view` value from its Scholar detail URL). Citation badges match these IDs; they do not guess from titles. An unmatched paper stays unlabeled.
 3. In **Settings → Secrets and variables → Actions**, add repository secret **`SERPAPI_API_KEY`** containing your own SerpApi key. Never put the key in a file or commit it.
 4. Add repository variable **`ENABLE_SCHOLAR_SYNC`** with value **`true`**.
 5. Run **Update Google Scholar statistics** manually once and inspect the run summary.

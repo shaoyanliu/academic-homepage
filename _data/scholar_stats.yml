@@ -1,0 +1,4 @@
+# Optional Google Scholar statistics. The template includes no author's data.
+# Enable scholar in _config.yml, set your profile_id, and run the sync to populate.
+# Successful updates replace this file atomically; failed checks preserve it.
+{}

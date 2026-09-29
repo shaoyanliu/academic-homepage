@@ -1,0 +1,12 @@
+# Display order is reversed by the navigation include.
+main:
+  - title: "CV"
+    url: /cv/
+  - title: "News"
+    url: /news/
+  - title: "Activities"
+    url: /activities/
+  - title: "Publications"
+    url: /publications/
+  - title: "About"
+    url: /

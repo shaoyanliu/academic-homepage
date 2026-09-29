@@ -1,0 +1,46 @@
+# Replace the fictional demo identity with your own details.
+title: Avery Researcher
+position: Ph.D. Student
+affiliation: Example University
+affiliation_link: https://example.com
+email: researcher@example.com
+
+# User site: url=https://USERNAME.github.io, baseurl=""
+# Project site: url=https://USERNAME.github.io, baseurl="/REPOSITORY"
+# The Pages workflow sets both automatically from your repository settings.
+url: https://example.com
+baseurl: ""
+lang: en-US
+description: A fictional academic homepage demonstrating publications, news, activities, and an interactive CV.
+google_site_verification: ""
+enable_last_update: false
+
+cv_pdf: /cv/example-cv.pdf
+avatar: /assets/img/avatar.svg
+google_scholar: ""
+orcid: ""
+github_link: ""
+linkedin: ""
+
+# Off by default. See README before enabling; API key belongs in GitHub Secrets.
+scholar:
+  enabled: false
+  profile_id: ""
+
+# Off by default; never sends visitors to the template author's analytics.
+analytics:
+  goatcounter_code: ""
+  show_count: false
+
+exclude:
+  - scripts
+  - tests
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - THIRD_PARTY_NOTICES.md
+  - vendor
+  - .bundle
+  - .github
+  - .venv

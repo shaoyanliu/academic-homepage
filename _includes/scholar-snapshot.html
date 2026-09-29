@@ -1,0 +1,16 @@
+{% comment %}Use this guard before displaying any totals or article citations.{% endcomment %}
+{% assign scholar_snapshot_valid = false %}
+{% assign scholar_stats = site.data.scholar_stats %}
+{% assign scholar_profile_id = site.scholar.profile_id | default: '' %}
+{% if site.scholar.enabled == true and scholar_profile_id != '' and scholar_stats.profile_id == scholar_profile_id %}
+{% assign scholar_papers = scholar_stats.papers | plus: 0 %}
+{% assign scholar_citations = scholar_stats.citations | plus: 0 %}
+{% assign scholar_h_index = scholar_stats.h_index | plus: 0 %}
+{% assign scholar_article_count = scholar_stats.articles | size %}
+{% assign scholar_min_citations = scholar_h_index | times: scholar_h_index %}
+{% assign scholar_updated_date = scholar_stats.updated | date: '%Y-%m-%d' %}
+{% assign scholar_updated_epoch = scholar_stats.updated | date: '%s' | plus: 0 %}
+{% if scholar_stats.papers == scholar_papers and scholar_papers > 0 and scholar_stats.citations == scholar_citations and scholar_citations >= scholar_min_citations and scholar_stats.h_index == scholar_h_index and scholar_h_index >= 0 and scholar_h_index <= scholar_papers and scholar_article_count == scholar_papers and scholar_updated_epoch > 0 and scholar_updated_date == scholar_stats.updated %}
+{% assign scholar_snapshot_valid = true %}
+{% endif %}
+{% endif %}

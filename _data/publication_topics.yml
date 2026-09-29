@@ -1,0 +1,10 @@
+# Match each id to values in a publication's topics list.
+- id: open-science
+  label: Open science
+  name: Open science and reproducibility
+- id: modeling
+  label: Modeling
+  name: Scientific modeling
+- id: data-science
+  label: Data science
+  name: Data analysis and uncertainty

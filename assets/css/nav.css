@@ -1,0 +1,255 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #13294B;
+    min-height: 46px;
+    overflow: hidden;
+	  position:fixed;
+	  z-index:999;
+    width:100%;
+  }
+
+
+  .topnav .nav-controls {
+    display: flex;
+    align-items: center;
+    float: right;
+  }
+
+  .topnav #myLinks {
+    display: flex;
+  }
+
+.topnav button.icon {
+    display: none;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    cursor: pointer;
+}
+
+.topnav button.icon:focus-visible {
+    outline: 2px solid white;
+    outline-offset: -4px;
+}
+
+  .topnav .site-brand {
+    display: inline-flex;
+    align-items: center;
+    height: 46px;
+    margin-left:30%;
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .topnav .site-brand:hover { color: #fff; }
+  .topnav .site-brand:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+  }
+
+  /* Style the links inside the navigation bar */
+  .topnav a.normal {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 9px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  /* Change the color of links on hover */
+  .topnav a.normal[aria-current="page"] {
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 -2px 0 #9bc5ed;
+  }
+
+  .topnav a.normal:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /* Align the link group with the page content. */
+  .topnav .nav-controls {
+    margin-right:30%;
+  }
+
+  @media print, screen and (max-width: 1000px) {
+
+    .topnav .site-brand {
+        margin-left:3%;
+      }
+
+    .topnav .nav-controls {
+        margin-right:3%;
+      }
+
+    .topnav a.normal {
+        padding: 10px 5px;
+    }
+
+   }
+
+   @media print, screen and (max-width: 1200px) and (min-width: 1001px) {
+
+    .topnav .site-brand {
+        margin-left:6%;
+      }
+    .topnav .nav-controls {
+        margin-right:6%;
+      }
+
+   }
+
+   @media print, screen and (max-width: 1400px) and (min-width: 1201px) {
+
+    .topnav .site-brand {
+        margin-left:12%;
+      }
+    .topnav .nav-controls {
+        margin-right:12%;
+      }
+
+      }
+
+
+   @media print, screen and (max-width: 1600px) and (min-width: 1401px) {
+
+    .topnav .site-brand {
+        margin-left:16%;
+      }
+    .topnav .nav-controls {
+        margin-right:16%;
+      }
+
+   }
+
+   @media print, screen and (max-width: 1800px) and (min-width: 1601px) {
+
+    .topnav .site-brand {
+        margin-left:19%;
+      }
+    .topnav .nav-controls {
+        margin-right:19%;
+      }
+
+   }
+
+   @media print, screen and (max-width: 2000px) and (min-width: 1801px) {
+
+    .topnav .site-brand {
+        margin-left:22%;
+      }
+    .topnav .nav-controls {
+        margin-right:22%;
+      }
+
+   }
+
+
+   @media print, screen and (max-width: 480px) {
+    .topnav #myLinks {
+        display: none;
+      }
+   }
+
+   @media print, screen and (max-width: 960px) {
+
+    .topnav .nav-controls {
+        display: block;
+        float: none;
+        margin-right: 0;
+      }
+
+    .topnav #myLinks {
+        display: none;
+        float: none;
+        margin-right: 0;
+      }
+
+    .topnav #myLinks.is-open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .topnav a.normal {
+        color: white;
+        float: none;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+      }
+
+      .topnav button.icon {
+        color: white;
+        display: block;
+        padding: 10px 16px;
+        font-size: 17px;
+        position: absolute;
+        float: right;
+        right: 0;
+        top: 0;
+        margin-right:5%;
+      }
+
+      .topnav a.right {
+        color: white;
+        float: none;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+        margin-right:0;
+      }
+   }
+
+
+
+/* Keep the theme control visible beside the menu on narrow screens. */
+.topnav .theme-toggle {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #f2f2f2;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.topnav .theme-toggle:not([hidden]) {
+    display: inline-flex;
+}
+
+.topnav .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.topnav .theme-toggle:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: -5px;
+}
+
+.theme-toggle .theme-sun,
+html[data-theme="dark"] .theme-toggle .theme-moon {
+    display: none;
+}
+
+html[data-theme="dark"] .theme-toggle .theme-sun {
+    display: block;
+}
+
+@media screen and (max-width: 960px) {
+    .topnav .theme-toggle {
+        position: absolute;
+        top: 0;
+        right: calc(5% + 48px);
+    }
+}

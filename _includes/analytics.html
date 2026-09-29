@@ -1,0 +1,8 @@
+{% assign goatcounter_code = site.analytics.goatcounter_code | default: '' | strip %}
+{% if goatcounter_code != '' %}
+<!-- Analytics is opt-in: configure your own GoatCounter site code. -->
+<script>
+  window.goatcounter = { path: window.location.pathname || "/" };
+</script>
+<script data-goatcounter="https://{{ goatcounter_code | escape }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+{% endif %}

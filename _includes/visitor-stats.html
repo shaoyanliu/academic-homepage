@@ -1,0 +1,37 @@
+{% assign goatcounter_code = site.analytics.goatcounter_code | default: '' | strip %}
+{% if goatcounter_code != '' and site.analytics.show_count == true %}
+{% assign goatcounter_url = 'https://' | append: goatcounter_code | append: '.goatcounter.com' %}
+<div class="visitor-stats">
+  <a class="visitor-stats-link" href="{{ goatcounter_url | escape }}" target="_blank" rel="noopener noreferrer" title="View detailed website statistics">
+    <span class="visitor-stats-title">Website Statistics</span>
+    <span aria-hidden="true">&middot;</span>
+    <span class="visitor-stats-content"><span id="goatcounter-total" class="visitor-stats-number">Loading...</span> <span class="visitor-stats-label">total page views</span></span>
+    <i class="fa-solid fa-arrow-up-right-from-square visitor-stats-link-icon" aria-hidden="true"></i>
+  </a>
+</div>
+<script>
+  (function () {
+    var counterElement = document.getElementById("goatcounter-total");
+    fetch({{ goatcounter_url | append: '/counter/TOTAL.json' | jsonify }}, {
+      method: "GET",
+      mode: "cors",
+      cache: "no-cache"
+    })
+      .then(function (response) {
+        if (!response.ok) throw new Error("Unable to load visitor count");
+        return response.json();
+      })
+      .then(function (data) {
+        if (data.count === undefined || data.count === null || String(data.count).trim() === "") {
+          throw new Error("No visitor count available");
+        }
+        var count = Number(String(data.count).replace(/,/g, ""));
+        if (!Number.isFinite(count) || count < 0) throw new Error("Invalid visitor count");
+        counterElement.textContent = count.toLocaleString("en-US");
+      })
+      .catch(function () {
+        counterElement.textContent = "Unavailable";
+      });
+  })();
+</script>
+{% endif %}

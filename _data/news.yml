@@ -1,0 +1,30 @@
+# Fictional demonstration updates. Keep newest entries first.
+# The homepage shows the first six; the archive shows every entry.
+# Optional url and photo_url accept local paths or full external URLs.
+- date: "Sep. 2026"
+  category: publication
+  content: "Added a fictional paper about reproducible scientific models."
+  url: /publications/
+  link_label: "Browse sample publications"
+- date: "Aug. 2026"
+  category: conference
+  content: "Presented an example poster at the Fictional Research Methods Workshop."
+  photo_url: /assets/img/research-demo.svg
+  photo_label: "View example illustration"
+  photo_caption: "A placeholder illustration for a fictional workshop update."
+  photo_alt: "Illustrative research workflow, not a photograph of a real event"
+- date: "May 2026"
+  category: education
+  content: "Completed an example teaching assistant appointment at Example University."
+- date: "Jan. 2026"
+  category: milestone
+  content: "Started a fictional collaboration on clear and reproducible research tools."
+- date: "Nov. 2025"
+  category: award
+  content: "Received a fictional student presentation award for this template demonstration."
+- date: "Sep. 2025"
+  category: review
+  content: "Joined the organizing team for an example open research reading group."
+- date: "Aug. 2025"
+  category: milestone
+  content: "Began the fictional doctoral program at Example University."

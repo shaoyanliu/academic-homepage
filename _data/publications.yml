@@ -1,0 +1,54 @@
+# Fictional demonstration records, not real publications or research claims.
+# Add your newest work first. Use selected: true to feature a paper on the homepage.
+# Local asset links begin with / and are resolved relative to your site's baseurl.
+main:
+  - title: "An Open Workflow for Reproducible Scientific Models"
+    authors: '<span class="publication-self-author">Avery Researcher</span>, Jordan Example'
+    conference_short: DEMO
+    conference: "Fictional Journal of Open Research, 2026. Demonstration record."
+    year: 2026
+    selected: true
+    topics: [open-science, modeling]
+    abstract: >-
+      This fictional abstract demonstrates the expandable publication summary. The example
+      describes a workflow that connects model assumptions, input data, and reproducible
+      analysis. It is placeholder content for the template and does not report a real study.
+    pdf: /files/example-paper.pdf
+    image: /assets/img/research-demo.svg
+    image_alt: "Illustrative diagram of a reproducible research workflow"
+    bibtex: /bib/example-workflow.bib
+    notes: "Fictional example"
+
+  - title: "Exploring Uncertainty in Small Research Datasets"
+    authors: 'Jordan Example, <span class="publication-self-author">Avery Researcher</span>, Morgan Sample'
+    conference_short: DEMO
+    conference: "Fictional Symposium on Research Methods, 2025. Demonstration record."
+    year: 2025
+    selected: true
+    topics: [data-science, modeling]
+    abstract: >-
+      This fictional abstract illustrates how to present a second research topic. It outlines
+      an example comparison of uncertainty estimates and visual explanations for small
+      datasets. No experiment, publication, or scientific finding is represented by this record.
+    pdf: /files/example-paper.pdf
+    image: /assets/img/research-demo.svg
+    image_alt: "Illustrative research diagram used as a publication placeholder"
+    bibtex: /bib/example-uncertainty.bib
+    notes: "Fictional example"
+
+  - title: "A Practical Guide to Sharing Research Data"
+    authors: '<span class="publication-self-author">Avery Researcher</span>, Morgan Sample'
+    conference_short: DEMO
+    conference: "Fictional Research Practice Notes, 2024. Demonstration record."
+    year: 2024
+    selected: false
+    topics: [open-science, data-science]
+    abstract: >-
+      This fictional abstract shows how a methods note can appear beside journal and
+      conference publications. The placeholder discusses documentation, reusable data,
+      and clear examples. Replace it with the abstract and links for your own work.
+    pdf: /files/example-paper.pdf
+    image: /assets/img/research-demo.svg
+    image_alt: "Illustrative research diagram used as a publication placeholder"
+    bibtex: /bib/example-data.bib
+    notes: "Fictional example"

@@ -1,0 +1,9 @@
+{% assign news_limit = include.limit | default: site.data.news.size %}
+<ul class="news-list" role="list">
+  {% for item in site.data.news limit:news_limit %}
+  <li class="news-item">
+    <div class="news-content"><strong class="news-date">[{{ item.date | escape }}]</strong> <span class="news-icon" aria-hidden="true">{{ site.data.news_icons[item.category] | default: '📌' | escape }}</span> {{ item.content }}{% if item.url %} <a href="{{ item.url | relative_url | escape }}">{{ item.link_label | default: 'Read more' | escape }}</a>{% endif %}{% if item.photo_url %} <a href="{{ item.photo_url | relative_url | escape }}" target="_blank" rel="noopener noreferrer" data-news-photo data-news-caption="{{ item.photo_caption | escape }}" data-news-alt="{{ item.photo_alt | default: item.photo_caption | escape }}">{{ item.photo_label | default: 'View photo' | escape }}</a>{% endif %}</div>
+  </li>
+  {% endfor %}
+</ul>
+{% include news-photo-viewer.html %}

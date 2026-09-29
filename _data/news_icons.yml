@@ -1,0 +1,7 @@
+# Add a category here, then reference it in news.yml.
+publication: "📝"
+conference: "🎤"
+review: "👓"
+education: "🎓"
+milestone: "🎉"
+award: "🏆"

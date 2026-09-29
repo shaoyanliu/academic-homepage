@@ -1,0 +1,12 @@
+# Fictional conference examples. Use YYYY-MM dates; newest entries appear first.
+- date: "2026-08"
+  meeting: "Fictional Research Methods Workshop"
+  location: "Example University"
+  type: "Poster"
+  title: "An Open Workflow for Reproducible Scientific Models"
+
+- date: "2025-11"
+  meeting: "Example Graduate Research Symposium"
+  location: "Example City"
+  type: "Oral Presentation"
+  title: "Exploring Uncertainty in Small Research Datasets"

@@ -1,0 +1,30 @@
+---
+layout: null
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' | escape }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="noindex">
+    <title>Page not found | {{ site.title | escape }}</title>
+    {% include favicon.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% include analytics.html %}
+    {% include theme-head.html %}
+  </head>
+  <body>
+    <main class="wrapper">
+      <h1>Page not found</h1>
+      <p>This address does not match a page on this website.</p>
+      <p><a href="{{ '/' | relative_url }}">Return to the homepage</a>. You will be redirected there in five seconds.</p>
+    </main>
+    <script>
+      window.setTimeout(function () {
+        window.location.replace({{ '/' | relative_url | jsonify }});
+      }, 5000);
+    </script>
+  </body>
+</html>

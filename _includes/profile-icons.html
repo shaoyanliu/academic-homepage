@@ -1,0 +1,17 @@
+<div class="{{ include.class | default: 'profile-nav' | escape }}" role="group" aria-label="Contact and academic profiles">
+  {% if site.email and site.email != '' %}
+  <a href="mailto:{{ site.email | escape }}" aria-label="Email {{ site.title | escape }}" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+  {% endif %}
+  {% if site.orcid and site.orcid != '' %}
+  <a href="{{ site.orcid | relative_url | escape }}" aria-label="ORCID" title="ORCID" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid" aria-hidden="true"></i></a>
+  {% endif %}
+  {% if site.google_scholar and site.google_scholar != '' %}
+  <a href="{{ site.google_scholar | relative_url | escape }}" aria-label="Google Scholar profile" title="Google Scholar" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar" aria-hidden="true"></i></a>
+  {% endif %}
+  {% if site.github_link and site.github_link != '' %}
+  <a href="{{ site.github_link | relative_url | escape }}" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+  {% endif %}
+  {% if site.linkedin and site.linkedin != '' %}
+  <a href="{{ site.linkedin | relative_url | escape }}" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+  {% endif %}
+</div>

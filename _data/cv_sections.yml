@@ -1,0 +1,10 @@
+# Headings must exactly match text in your PDF (case is ignored).
+# The reader locates matching headings automatically; no page coordinates are needed.
+- title: Education
+  heading: EDUCATION
+- title: Research Interests
+  heading: RESEARCH INTERESTS
+- title: Experience
+  heading: EXPERIENCE
+- title: Selected Publications
+  heading: SELECTED PUBLICATIONS

@@ -9,4 +9,5 @@ __pycache__/
 
 .venv/
 .bundle/
-vendor/
+# Ignore root-level Ruby dependencies; retain browser libraries in assets/vendor/.
+/vendor/
